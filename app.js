@@ -38,6 +38,7 @@ const LEEFSTIJL = [
   { k: 'scherm', label: 'Schermtijd', type: 'getal', eenheid: 'uur', stap: 1, min: 0, max: 20, start: 4 },
   { k: 'maaltijd', label: 'Maaltijd overgeslagen', type: 'janee' },
   { k: 'beweging', label: 'Bewogen of gesport', type: 'janee' },
+  { k: 'wandeling', label: 'Middagwandeling', type: 'janee' },
   { k: 'weer', label: 'Weersomslag', type: 'janee' },
 ];
 
@@ -56,6 +57,7 @@ const FACTOREN = [
   { label: '6 uur of meer schermtijd', f: (d) => isGetal(d.leefstijl.scherm) ? d.leefstijl.scherm >= 6 : null },
   { label: 'Maaltijd overgeslagen', f: (d) => isBool(d.leefstijl.maaltijd) ? d.leefstijl.maaltijd : null },
   { label: 'Niet bewogen', f: (d) => isBool(d.leefstijl.beweging) ? !d.leefstijl.beweging : null },
+  { label: 'Geen middagwandeling', f: (d) => isBool(d.leefstijl.wandeling) ? !d.leefstijl.wandeling : null },
   { label: 'Weersomslag', f: (d) => isBool(d.leefstijl.weer) ? d.leefstijl.weer : null },
 ];
 const MIN_DAGEN = 3; // minimaal aantal dagen per groep voordat we een percentage tonen
@@ -414,6 +416,7 @@ function viewArts() {
       isGetal(l.cafeine) ? `cafeïne ${l.cafeine}` : '',
       isGetal(l.alcohol) && l.alcohol > 0 ? `alcohol ${l.alcohol}` : '',
       l.maaltijd ? 'maaltijd overgeslagen' : '',
+      l.wandeling ? 'middagwandeling' : '',
       l.weer ? 'weersomslag' : '',
     ].filter(Boolean).join(', ');
     return `<tr class="${d.status === 'ja' ? 'pijnrij' : ''}">

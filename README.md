@@ -2,7 +2,7 @@
 
 Eenvoudig hoofdpijndagboek als webapp voor de iPhone. Live op https://floriandekker.github.io/Hoofdpijndagboek/
 
-- **Dag**: hoofdpijn ja/nee; per aanval begin/eind, ernst (1-10), plek, soort en bijverschijnselen; leefstijl (slaap, stress, drukte, cafeïne, alcohol, water, schermtijd, maaltijden, beweging, weer) en een notitie.
+- **Dag**: hoofdpijn ja/nee; per aanval begin/eind, ernst (1-10), plek, soort en bijverschijnselen; leefstijl (slaap, stress, drukte, cafeïne, alcohol, water, schermtijd, maaltijden, beweging, middagwandeling, weer) en een notitie.
 - **Kalender**: maandoverzicht, gekleurd naar ernst.
 - **Inzichten**: hoofdpijndagen per maand en per factor het percentage hoofdpijndagen met en zonder die factor.
 - **Voor de arts**: overzicht over een zelfgekozen periode om af te drukken of als PDF te bewaren, export naar CSV, back-up en terugzetten.

@@ -1,5 +1,5 @@
 // Bij elke deploy VERSIE ophogen en de ?v= in index.html gelijk trekken.
-const VERSIE = 2;
+const VERSIE = 3;
 const CACHE = `hoofdpijndagboek-v${VERSIE}`;
 const BESTANDEN = [
   './',
